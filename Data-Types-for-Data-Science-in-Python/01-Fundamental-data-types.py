@@ -1048,3 +1048,89 @@ quit()
 
 #######################################################
 # Meet the Tuples ------------------------------------------------
+girl_names = ['JADA', 'Emily', 'Ava', 'SERENITY', 'Claire', 'SOPHIA', 'Sarah', 'ASHLEY', 
+'CHAYA', 'ABIGAIL', 'Zoe', 'LEAH', 'HAILEY', 'AVA', 'Olivia', 'EMMA', 'CHLOE', 'Sophia',
+'AALIYAH', 'Angela', 'Camila', 'Savannah', 'Serenity', 'Chloe', 'Fatoumata', 'ISABELLA',
+'MIA', 'FIONA', 'Skylar', 'Ashley', 'Rachel', 'Sofia', 'Alina', 'MADISON', 'RACHEL',
+'CAMILA', 'CHANA', 'TAYLOR', 'Kayla', 'Miriam', 'Leah', 'Grace', 'ANGELA', 'Isabella', 
+'Emma', 'KAYLA', 'SOFIA', 'Madison', 'Aaliyah', 'Taylor', 'GENESIS', 'Esther', 'MAKAYLA',
+'Victoria', 'Chaya', 'Brielle', 'Anna', 'Samantha', 'ESTHER', 'GRACE', 'Mariam', 'Mia',
+'NEVAEH', 'GABRIELLE', 'EMILY', 'London', 'TIFFANY', 'Chana', 'Valentina', 'OLIVIA',
+'LONDON', 'MIRIAM', 'SARAH', 'ELLA']
+boy_names = ['JOSIAH', 'ETHAN', 'David', 'Jayden', 'MASON', 'RYAN', 'CHRISTIAN', 'ISAIAH',
+'JAYDEN', 'Michael', 'NOAH', 'SAMUEL', 'SEBASTIAN', 'Noah', 'Dylan', 'LUCAS', 'JOSHUA',
+'ANGEL', 'Jacob', 'Matthew', 'Josiah', 'JACOB', 'Muhammad', 'ALEXANDER', 'Jason', 'Ethan',
+'DANIEL', 'Joseph', 'AIDEN', 'Moshe', 'Jeremiah', 'William', 'Alexander', 'Sebastian',
+'ERIC', 'MOSHE', 'Jack', 'Eric', 'MUHAMMAD', 'Lucas', 'BENJAMIN', 'Aiden', 'Ryan', 'Liam', 
+'JASON', 'KEVIN', 'Elijah', 'Angel', 'JAMES', 'Daniel', 'Samuel', 'Amir', 'Mason', 'Joshua', 
+'ANTHONY', 'JOSEPH', 'Benjamin', 'JUSTIN', 'JEREMIAH', 'MATTHEW', 'Carter', 'James', 'TYLER',
+'DAVID', 'JACK', 'ELIJAH', 'MICHAEL', 'CHRISTOPHER']
+# Using and unpacking tuples
+# Pair up the girl and boy names: pairs
+pairs = list(zip(girl_names, boy_names))
+
+# Iterate over pairs
+for idx, pair in enumerate(pairs) :
+    # Unpack pair: girl_name, boy_name
+    girl_name, boy_name = pair
+    # Print the rank and names associated with each rank
+    print('Rank {}: {} and {}'.format(idx, girl_name, boy_name))
+quit()
+
+# Making tuples by accident
+# Create the normal variable: normal
+normal = 'simple'
+
+# Create the mistaken variable: error
+error = 'trailing comma',
+
+# Print the types of the variables
+print(type(normal))
+print(type(error))
+
+#######################################################
+# Sets for unordered and unique data ------------------------------------------------
+# We use sets when we want to store unique data elements in an unordered fashion
+# .add() - adds new single elements to the set
+# .update() - merges in another set or list with multiple itens
+# .discard() - safely removes an element from the set by value
+# .pop() - removes and returns an arbitrary element from the set
+# .union() - returns a method of all the names (or)
+# .intersction() - identifies overlapping data (and)
+# .difference() - identifies data present in the set on which the method was used that is not
+# in the arguments (-)
+baby_names_2011 = set(['Greyson', 'Katelynn', 'Jaylyn', 'Hugo', 'Ariela', 'Jared', 'Aissatou', 'Kyle', 'Mackenzie', 'Kevin', 'Ximena', 'Zev', 'Mike', 'Berish', 'Yidel', 'Abdoulaye', 'Janelle', 'Renee', 'Zaniyah', 'Serena', 'Maxim', 'Sariah', 'Aidan', 'Elijah', 'Jermaine', 'Autumn', 'Jaime', 'Roberto', 'Melany', 'Zyaire', 'Lena', 'Binyomin', 'Sofia', 'Aiden', 'Aimee', 'Janiyah', 'Jasmine', 'Omar', 'Georgia', 'Kelvin', 'Abdul', 'Violet', 'Lipa', 'Brenda', 'Valeria', 'Nadia', 'Briana', 'Jessica', 'Tatiana', 'Maximiliano', 'Tzipora', 'Jake', 'Kiyan', 'Matilda', 'Finley', 'Manuel', 'Daisy', 'Dov', 'Raymond', 'Arthur', 'Mandy', 'Januel', 'Estrella', 'Beatrice', 'Tzippy', 'Yamilet', 'Kailey', 'Diya', 'Rocco', 'Ryder', 'Chris', 'Raizel', 'Taraji', 'Maksim', 'Francesca', 'Santiago', 'Mendy', 'Miles', 'Jayleen', 'Yachet', 'Mikayla', 'Chaya', 'Lilah', 'Alexis', 'Max', 'Aniya', 'Emely', 'Beckett', 'Adriana', 'Royce', 'Shaina', 'Chad', 'Shloimy', 'Nathan', 'Nikolas', 'Theodore', 'Nigel', 'Filip', 'Maliyah', 'Henry', 'Alejandra', 'Lia', 'Fatoumata', 'Corey', 'Rafael', 'Sekou', 'Analia', 'Arianna', 'April', 'Alondra', 'Brielle', 'Lucia', 'Ari', 'Valerie', 'Tony', 'Meilech', 'Shevy', 'Brianny', 'Jamal', 'Ezekiel', 'Carmine', 'Lina', 'Nathaly', 'Damian', 'Judah', 'Sarah', 'Allen', 'Morgan', 'Troy', 'Melvin', 'Brendan', 'Janice', 'Eric', 'Kailyn', 'Lucy', 'Aliza', 'Tzivia', 'Ilan', 'Sebastian', 'Junior', 'Mariam', 'Aria', 'Blimy', 'Isabelle', 'Laila', 'Krystal', 'Amiyah', 'Maximus', 'Jerry', 'Angel', 'Lukas', 'Shloime', 'Malak', 'Edward', 'Leon', 'Dina', 'Damien', 'Jadiel', 'Crystal', 'Benzion', 'Mya', 'Jamel', 'Emiliano', 'Antonio', 'Dylan', 'Heaven', 'Izabella', 'Cynthia', 'Molly', 'Faith', 'Camila', 'Alexandra', 'Usher', 'Shaindel', 'Gemma', 'Giselle', 'Jayla', 'Caroline', 'Milena', 'Dean', 'Sam', 'Ashly', 'Eve', 'Amaya', 'Denise', 'Preston', 'Caleb', 'Veronica', 'Miah', 'Michal', 'Leela', 'Kaitlyn', 'Michaela', 'Elliana', 'Destiny', 'Edwin', 'Jencarlos', 'Zion', 'Michelle', 'Lea', 'Jose', 'Fradel', 'Brynn', 'Kayleen', 'Aiza', 'Noemi', 'Wilson', 'Jasiah', 'Lillian', 'Veronika', 'Chance', 'Cooper', 'Syeda', 'Aharon', 'Armani', 'Amirah', 'Selina', 'Kamari', 'Khalil', 'Nahla', 'Ben', 'Jordan', 'Malachi', 'Bradley', 'Paige', 'Frimet', 'Shaya', 'Yaseen', 'Leo', 'Genevieve', 'Esty', 'Shulem', 'Angely', 'Brian', 'Jacob', 'Yerik', 'Leora', 'Julio', 'Zara', 'Johann', 'Leah', 'Lily', 'Fraidy', 'Amir', 'Amare', 'Tzvi', 'Libby', 'Isabela', 'Ellie', 'Annabelle', 'Brandon', 'Rivky', 'Raina', 'Rowan', 'Joaquin', 'Dana', 'Hadassah', 'Yechezkel', 'Skyla', 'Mina', 'Dovid', 'Haylee', 'Angela', 'Kiara', 'Sarai', 'Carlos', 'Nasir', 'Ashton', 'Shawn', 'Brianna', 'Keyla', 'Danny', 'Kyla', 'Stephanie', 'Sasha', 'King', 'Colin', 'Mohammad', 'Barbara', 'Miri', 'Morris', 'Jason', 'Jeancarlos', 'Annie', 'Anaya', 'Perel', 'Prince', 'Leila', 'Jahmir', 'Elise', 'Scarlet', 'Ruth', 'Alison', 'Leonel', 'Eduardo', 'Alessandra', 'Sidney', 'Sylvia', 'Anna', 'Lawrence', 'Erik', 'Kaden', 'Elimelech', 'Griffin', 'Nicholas', 'Santino', 'Mckenzie', 'Felix', 'Giovanni', 'Amy', 'Ingrid', 'Maya', 'Paris', 'Adam', 'Yaakov', 'Kaliyah', 'Hershy', 'Genesis', 'Jocelyn', 'Daniel', 'Brucha', 'Adrian', 'Yosef', 'Yaretzi', 'Mindy', 'Armando', 'Graham', 'Eliana', 'Kenneth', 'Marilyn', 'Travis', 'Shmuel', 'Elizabeth', 'Iris', 'Serenity', 'Amari', 'Jennifer', 'Leandro', 'Eileen', 'Raizy', 'Lyric', 'Jariel', 'Jaheim', 'Naomi', 'Aarav', 'Heidi', 'Jane', 'Savanna', 'Jonah', 'William', 'Ahron', 'Baruch', 'Rayan', 'Aurora', 'Nicolette', 'Bryant', 'Mauricio', 'Jaylene', 'Diego', 'Fernanda', 'Meir', 'Andrea', 'Samara', 'Dominick', 'Samir', 'Freddy', 'Jasmin', 'Jaylin', 'Christy', 'Victoria', 'Baila', 'Hershel', 'Casey', 'Delilah', 'Vicky', 'Malka', 'Anastasia', 'Joy', 'Jazmine', 'Yocheved', 'Ruben', 'Mikaela', 'Haley', 'Rose', 'Rifka', 'Ayla', 'Sophia', 'Alana', 'Esther', 'Pinchus', 'Shlome', 'Devora', 'Alfredo', 'Aminata', 'Miguel', 'Terrence', 'Terrell', 'Mariama', 'Nosson', 'Soraya', 'Jacqueline', 'Ester', 'Armaan', 'Julianna', 'Tamia', 'Landon', 'Daniela', 'Yaniel', 'Gabriella', 'Frank', 'Rochel', 'Aditya', 'Avigail', 'Nevaeh', 'Jeremiah', 'Avrum', 'Athena', 'Luca', 'Adriel', 'Yandel', 'Aubrey', 'Shimon', 'Joanna', 'Eddie', 'Jayce', 'Aisha', 'Siena', 'Peyton', 'Evan', 'Giuliana', 'Kayden', 'Kaiden', 'Martin', 'Melissa', 'Tessa', 'Yitty', 'Thomas', 'Cesar', 'Marco', 'Arianny', 'Sanai', 'Lucas', 'Ishmael', 'Kieran', 'Aryan', 'Celeste', 'Brooke', 'Xin', 'Tori', 'Mario', 'Cameron', 'Shirley', 'Eleanor', 'Bianca', 'Mekhi', 'Elianny', 'Angelo', 'Geraldine', 'Piper', 'George', 'Yariel', 'Zachary', 'Alec', 'Augustus', 'Kate', 'Jacky', 'Tomas', 'Stanley', 'Chavy', 'Owen', 'Skye', 'Malky', 'Julie', 'Syed', 'Amani', 'Ian', 'Vincenzo', 'Samuel', 'Brayden', 'Elisheva', 'Clara', 'Hannah', 'Alyson', 'Johan', 'Aleena', 'Londyn', 'Imani', 'Abdoul', 'Olivia', 'Amrom', 'Rodrigo', 'London', 'Ayaan', 'Calvin', 'Adrianna', 'Menashe', 'Elle', 'Zoey', 'Simcha'])
+baby_names_2014 = set['Greyson', 'Rehan', 'Damon', 'Hugo', 'Jared', 'Aissatou', 'Kyle', 'Mackenzie', 'Kevin', 'Ximena', 'Zev', 'Mike', 'Berish', 'Yidel', 'Abdoulaye', 'Janelle', 'Zaniyah', 'Serena', 'Reizy', 'Maxim', 'Sariah', 'Aidan', 'Elijah', 'Journee', 'Autumn', 'Melany', 'Roberto', 'Adelyn', 'Lena', 'Binyomin', 'Sofia', 'Aiden', 'Orlando', 'Valery', 'Jasmine', 'Omar', 'Georgia', 'Madisyn', 'Maddox', 'Frances', 'Violet', 'Lipa', 'Brenda', 'Valeria', 'Nadia', 'Briana', 'Jessica', 'Tatiana', 'Joshua', 'Maximiliano', 'Tzipora', 'Jake', 'Manuel', 'Matilda', 'Musa', 'Daisy', 'Dov', 'Raymond', 'Arthur', 'Mandy', 'Beatrice', 'Kailey', 'Rocco', 'Melina', 'Ryder', 'Chris', 'Raizel', 'Zane', 'Santiago', 'Francesca', 'Miles', 'Mendy', 'Claire', 'Reuben', 'Jayleen', 'Alexia', 'Savion', 'Mikayla', 'Chaya', 'Lilah', 'Alexis', 'Sawyer', 'Max', 'Aniya', 'Emely', 'Beckett', 'Adriana', 'Anayah', 'Shaina', 'Shloimy', 'Nathan', 'Theodore', 'Marielle', 'Filip', 'Maliyah', 'Henry', 'Alejandra', 'Lia', 'Major', 'Fatoumata', 'Queena', 'Rafael', 'Arianna', 'April', 'Alondra', 'Brigitte', 'Brielle', 'Lucia', 'Ari', 'Valerie', 'Rory', 'Tony', 'Yasmin', 'Meilech', 'Mirel', 'Bruce', 'Ezekiel', 'Lina', 'Nathaly', 'Damian', 'Judah', 'Thiago', 'Sarah', 'Allen', 'Adyan', 'Morgan', 'Melvin', 'Rayyan', 'Perry', 'Cecelia', 'Janice', 'Brendan', 'Roy', 'Noelle', 'Eric', 'Lucy', 'Aliza', 'Sebastian', 'Lailah', 'Junior', 'Mariam', 'Aria', 'Avital', 'Blimy', 'Isabelle', 'Laila', 'Amiyah', 'Maximus', 'Jerry', 'Angel', 'Luciana', 'Jakub', 'Lukas', 'Shloime', 'Malak', 'Edward', 'Leon', 'Dina', 'Damien', 'Jadiel', 'Crystal', 'Ronan', 'Khadijah', 'Benzion', 'Mya', 'Antonio', 'Emiliano', 'Dylan', 'Heaven', 'Izabella', 'Daleyza', 'Molly', 'Faith', 'Fabian', 'Cynthia', 'Camila', 'Alexandra', 'Sylvie', 'Usher', 'Shaindel', 'Gemma', 'Jaxon', 'Giselle', 'Jayla', 'Azaan', 'Caroline', 'Dean', 'Sam', 'Annabella', 'Eve', 'Amaya', 'Preston', 'Caleb', 'Veronica', 'Kaitlyn', 'Michaela', 'Monica', 'Cormac', 'Destiny', 'Edwin', 'Michelle', 'Zion', 'Lea', 'Jose', 'Fradel', 'Brynn', 'Kayleen', 'Aiza', 'Khadija', 'Wilson', 'Jasiah', 'Lillian', 'Syeda', 'Chance', 'Cooper', 'Aharon', 'Alfred', 'Armani', 'Amirah', 'Selina', 'Kamari', 'Khalil', 'Nahla', 'Ben', 'Jordan', 'Malachi', 'Bradley', 'Eleni', 'Paige', 'Frimet', 'Shaya', 'Yaseen', 'Leo', 'Genevieve', 'Esty', 'Shulem', 'Evangeline', 'Brian', 'Jacob', 'Leora', 'Julio', 'Anne', 'Zara', 'Tess', 'Leah', 'Lily', 'Fraidy', 'Amir', 'Amare', 'Tzvi', 'Libby', 'Annabelle', 'Ellie', 'Alpha', 'Brandon', 'Yossi', 'Rivky', 'Raina', 'Rowan', 'Joaquin', 'Ahmed', 'Hadassah', 'Skyla', 'Mina', 'Dovid', 'Haylee', 'Angela', 'Israel', 'Kiara', 'Sarai', 'Carlos', 'Nasir', 'Ashton', 'Shawn', 'Brianna', 'Keyla', 'Danny', 'Kyla', 'Anabella', 'Sasha', 'King', 'Colin', 'Stephanie', 'Mohammad', 'Barbara', 'Jason', 'Morris', 'Angeline', 'Zahir', 'Annie', 'Anaya', 'Perel', 'Prince', 'Leila', 'Alma', 'Nikita', 'Ruth', 'Aayan', 'Alison', 'Eduardo', 'Alessandra', 'Karina', 'Francis', 'Sylvia', 'Lawrence', 'Erik', 'Kaden', 'Anna', 'Elimelech', 'Griffin', 'Nicholas', 'Santino', 'Mckenzie', 'Felix', 'Giovanni', 'Amy', 'Maya', 'Paris', 'Adam', 'Yaakov', 'Hershy', 'Genesis', 'Jocelyn', 'Daniel', 'Brucha', 'Adrian', 'Ayan', 'Yaretzi', 'Mindy', 'Yosef', 'Graham', 'Eliana', 'Kenneth', 'Marilyn', 'Travis', 'Alanis', 'Shmuel', 'Elizabeth', 'Walter', 'Amari', 'Iris', 'Leandro', 'Eileen', 'Serenity', 'Lyric', 'Jariel', 'Raizy', 'Denis', 'Naomi', 'Heidi', 'Jane', 'William', 'Jonah', 'Zendaya', 'Baruch', 'Aurora', 'Rayan', 'Bryant', 'Jaylene', 'Diego', 'Meir', 'Hamza', 'Andrea', 'Samara', 'Dominick', 'Samir', 'Jaylin', 'Safa', 'Victoria', 'Baila', 'Hershel', 'Caiden', 'Shayna', 'Lincoln', 'Delilah', 'Arvin', 'Everly', 'Vicky', 'Malka', 'Anastasia', 'Joy', 'Yocheved', 'Ruben', 'Mikaela', 'Rose', 'Ayla', 'Sophia', 'Alana', 'Esther', 'Pinchus', 'Shlome', 'Devora', 'Doris', 'Aminata', 'Miguel', 'Kali', 'Louisa', 'Mariama', 'Nosson', 'Jacqueline', 'Ester', 'Armaan', 'Julianna', 'Landon', 'Daniela', 'Zayden', 'Magaly', 'Gabriella', 'Frank', 'Rochel', 'Aniyah', 'Avigail', 'Nevaeh', 'Jeremiah', 'Avrum', 'Athena', 'Luca', 'Adriel', 'Yandel', 'Aubrey', 'Shimon', 'Frady', 'Joanna', 'Jayce', 'Liv', 'Aisha', 'Siena', 'Peyton', 'Anton', 'Evan', 'Giuliana', 'Kayden', 'Kaiden', 'Martin', 'Melissa', 'Tessa', 'Yitty', 'Thomas', 'Cesar', 'Nashla', 'Marco', 'Sanai', 'Lucas', 'Kieran', 'Celeste', 'Aryan', 'Brooke', 'Tori', 'Mario', 'Cameron', 'Shirley', 'Eleanor', 'Aya', 'Poppy', 'Bianca', 'Mekhi', 'Yariel', 'Angelo', 'Piper', 'George', 'Zachary', 'Aydin', 'Monserrat', 'Kate', 'Alissa', 'Imran', 'Stanley', 'Chavy', 'Owen', 'Skye', 'Malky', 'Jana', 'Julie', 'Syed', 'Blessing', 'Ian', 'Vincenzo', 'Kabir', 'Winston', 'Adan', 'Brayden', 'Elisheva', 'Samuel', 'Clara', 'Hannah', 'Johan', 'Aleena', 'Oumou', 'Shraga', 'Londyn', 'Imani', 'Abdoul', 'Olivia', 'Antonia', 'Rodrigo', 'London', 'Ayaan', 'Calvin', 'Hana']
+# Finding all the data and the overlapping data between sets
+# Find the union: all_names
+all_names = baby_names_2011.union(baby_names_2014)
+
+# Print the count of names in all_names
+print(len(all_names))
+
+
+# Find the intersection: overlapping_names
+overlapping_names = baby_names_2011.intersection(baby_names_2014)
+
+# Print the count of names in overlapping_names
+print(len(overlapping_names))
+
+# Determining set difference
+records = [['2011', 'FEMALE', 'HISPANIC', 'Geraldine', '13', '75'], ['2011', 'FEMALE', 'HISPANIC', 'Gia', '21', '67'], ['2011', 'FEMALE', 'HISPANIC', 'Gianna', '49', '42'], ['2011', 'FEMALE', 'HISPANIC', 'Giselle', '38', '51'], ['2011', 'FEMALE', 'HISPANIC', 'Grace', '36', '53'], ['2011', 'FEMALE', 'HISPANIC', 'Guadalupe', '26', '62'], ['2011', 'FEMALE', 'HISPANIC', 'Hailey', '126', '8'], ['2011', 'FEMALE', 'HISPANIC', 'Haley', '14', '74'], ['2011', 'FEMALE', 'HISPANIC', 'Hannah', '17', '71'], ['2011', 'FEMALE', 'HISPANIC', 'Haylee', '17', '71'], ['2011', 'FEMALE', 'HISPANIC', 'Hayley', '13', '75'], ['2011', 'FEMALE', 'HISPANIC', 'Hazel', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Heaven', '15', '73'], ['2011', 'FEMALE', 'HISPANIC', 'Heidi', '15', '73'], ['2011', 'FEMALE', 'HISPANIC', 'Heidy', '16', '72'], ['2011', 'FEMALE', 'HISPANIC', 'Helen', '13', '75'], ['2011', 'FEMALE', 'HISPANIC', 'Imani', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Ingrid', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Irene', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Iris', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Isabel', '28', '60'], ['2011', 'FEMALE', 'HISPANIC', 'Isabela', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Isabella', '331', '1'], ['2011', 'FEMALE', 'HISPANIC', 'Isabelle', '18', '70'], ['2011', 'FEMALE', 'HISPANIC', 'Isis', '13', '75'], ['2011', 'FEMALE', 'HISPANIC', 'Itzel', '27', '61'], ['2011', 'FEMALE', 'HISPANIC', 'Izabella', '23', '65'], ['2011', 'FEMALE', 'HISPANIC', 'Jacqueline', '30', '58'], ['2011', 'FEMALE', 'HISPANIC', 'Jada', '21', '67'], ['2011', 'FEMALE', 'HISPANIC', 'Jade', '50', '41'], ['2011', 'FEMALE', 'HISPANIC', 'Jaelynn', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Jamie', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Janelle', '12', '76'], ['2011', 'FEMALE', 'HISPANIC', 'Jaslene', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Jasmin', '20', '68'], ['2011', 'FEMALE', 'HISPANIC', 'Jasmine', '41', '48'], ['2011', 'FEMALE', 'HISPANIC', 'Jayda', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Jayla', '33', '55'], ['2011', 'FEMALE', 'HISPANIC', 'Jaylah', '12', '76'], ['2011', 'FEMALE', 'HISPANIC', 'Jayleen', '51', '40'], ['2011', 'FEMALE', 'HISPANIC', 'Jaylene', '22', '66'], ['2011', 'FEMALE', 'HISPANIC', 'Jaylin', '13', '75'], ['2011', 'FEMALE', 'HISPANIC', 'Jaylyn', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Jazlyn', '16', '72'], ['2011', 'FEMALE', 'HISPANIC', 'Jazmin', '24', '64'], ['2011', 'FEMALE', 'HISPANIC', 'Jazmine', '14', '74'], ['2011', 'FEMALE', 'HISPANIC', 'Jennifer', '59', '34'], ['2011', 'FEMALE', 'HISPANIC', 'Jessica', '46', '44'], ['2011', 'FEMALE', 'HISPANIC', 'Jimena', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Jocelyn', '46', '44'], ['2011', 'FEMALE', 'HISPANIC', 'Johanna', '12', '76'], ['2011', 'FEMALE', 'HISPANIC', 'Joselyn', '30', '58'], ['2011', 'FEMALE', 'HISPANIC', 'Julia', '22', '66'], ['2011', 'FEMALE', 'HISPANIC', 'Juliana', '16', '72'], ['2011', 'FEMALE', 'HISPANIC', 'Julianna', '21', '67'], ['2011', 'FEMALE', 'HISPANIC', 'Juliet', '20', '68'], ['2011', 'FEMALE', 'HISPANIC', 'Juliette', '15', '73'], ['2011', 'FEMALE', 'HISPANIC', 'Julissa', '16', '72'], ['2011', 'FEMALE', 'HISPANIC', 'Kaelyn', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Kailey', '20', '68'], ['2011', 'FEMALE', 'HISPANIC', 'Kailyn', '11', '77'], ['2011', 'FEMALE', 'HISPANIC', 'Kaitlyn', '31', '57'], ['2011', 'FEMALE', 'HISPANIC', 'Kamila', '36', '53'], ['2011', 'FEMALE', 'HISPANIC', 'Karen', '41', '48'], ['2011', 'FEMALE', 'HISPANIC', 'Karla', '25', '63'], ['2011', 'FEMALE', 'HISPANIC', 'Kate', '27', '61'], ['2011', 'FEMALE', 'HISPANIC', 'Katelyn', '23', '65'], ['2011', 'FEMALE', 'HISPANIC', 'Katelynn', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Katherine', '60', '33'], ['2011', 'FEMALE', 'HISPANIC', 'Katie', '12', '76'], ['2011', 'FEMALE', 'HISPANIC', 'Kayla', '62', '31'], ['2011', 'FEMALE', 'HISPANIC', 'Kaylee', '83', '20'], ['2011', 'FEMALE', 'HISPANIC', 'Kayleen', '19', '69'], ['2011', 'FEMALE', 'HISPANIC', 'Kayleigh', '10', '78'], ['2011', 'FEMALE', 'HISPANIC', 'Kaylie', '15', '73'], ['2011', 'FEMALE', 'HISPANIC', 'Kaylin', '12', '76']]
+# Create the empty set: baby_names_2011
+baby_names_2011 = set()
+
+# Loop over records and add the names from 2011 to the baby_names_2011 set
+for row in records:
+    # Check if the first column is '2011'
+    if row[0] == '2011':
+        # Add the fourth column to the set
+        baby_names_2011.add(row[3])
+quit()
+# Find the difference between 2011 and 2014: differences
+differences = baby_names_2011.difference(baby_names_2014)
+
+# Print the differences
+print(differences)
+
+#######################################################
