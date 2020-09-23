@@ -88,3 +88,35 @@ del female_names[2012]
 
 # Print female_names
 print(female_names)
+
+# Working with dictionaries more pythonically
+baby_names = {2012: {}, 2013: {1: 'David', 2: 'Joseph', 3: 'Michael', 4: 'Moshe', 5: 'Daniel', 6: 'Benjamin', 7: 'James', 8: 'Jacob', 9: 'Jack', 10: 'Alexander'}, 2014: {1: 'Joseph', 2: 'David', 3: 'Michael', 4: 'Moshe', 5: 'Jacob', 6: 'Benjamin', 7: 'Alexander', 8: 'Daniel', 9: 'Samuel', 10: 'Jack'}}
+# Iterate over the 2014 nested dictionary
+for rank, name in baby_names[2014].items():
+    # Print rank and name
+    print(rank, name)
+quit()    
+# Iterate over the 2012 nested dictionary
+for rank, name in baby_names[2012].items : 
+    # Print rank and name
+  print(rank, name)
+quit()
+
+# Checking dictionaries for data
+# Check to see if 2011 is in baby_names
+____ ____ ____ ____:
+    # Print 'Found 2011'
+    print('Found 2011')
+    
+# Check to see if rank 1 is in 2012
+
+    # Print 'Found Rank 1 in 2012' if found
+    print('Found Rank 1 in 2012')
+else:
+    # Print 'Rank 1 missing from 2012' if not found
+    print('Rank 1 missing from 2012')
+    
+# Check to see if Rank 5 is in 2013
+
+   # Print 'Found Rank 5'
+   print('Found Rank 5')
