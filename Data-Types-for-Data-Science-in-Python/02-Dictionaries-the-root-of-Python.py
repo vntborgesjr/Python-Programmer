@@ -12,7 +12,13 @@ library(reticulate)
 # the key is not found
 # .update() - updata a dictionary with keys and values from another dictionary, tuples or
 # keyword arguments
-female_baby_names_2012 = {1: 'EMMA', 2: 'LEAH', 3: 'SARAH', 4: 'SOPHIA', 5: 'ESTHER', 6: 'RACHEL', 7: 'CHAYA', 8: 'AVA', 9: 'CHANA', 10: 'MIRIAM', 11: 'ELLA', 12: 'EMILY', 13: 'MIA', 14: 'SARA', 15: 'CHARLOTTE', 16: 'ISABELLA', 17: 'MAYA', 18: 'ELIZABETH', 19: 'ABIGAIL', 20: 'ALEXANDRA', 21: 'VICTORIA', 22: 'LILY', 23: 'SOFIA', 24: 'RIVKA', 25: 'ZOE', 26: 'JULIA', 27: 'SOPHIE', 28: 'GABRIELLA', 29: 'HANNAH', 30: 'GRACE', 31: 'AVERY', 32: 'STELLA', 33: 'SHAINDY', 34: 'FAIGY', 35: 'GITTY', 36: 'MADISON', 37: 'MALKY', 38: 'EVA', 39: 'MALKA', 40: 'ALEXA', 41: 'MADELINE', 42: 'PENELOPE', 43: 'TOBY', 44: 'RIVKY', 45: 'NICOLE', 46: 'VIOLET', 47: 'NATALIE', 48: 'REBECCA', 49: 'MARIA', 50: 'YITTY', 51: 'NINA', 52: 'KATHERINE', 53: 'RILEY', 54: 'SIENNA', 55: 'SYDNEY', 56: 'VIVIENNE', 57: 'VALENTINA', 58: 'TALIA', 59: 'JOSEPHINE', 60: 'FRANCESCA', 61: 'ZISSY', 62: 'SURY', 63: 'NAOMI', 64: 'YIDES', 65: 'SKYLAR', 66: 'VERONICA', 67: 'TAYLOR', 68: 'ZOEY', 69: 'LILIANA', 70: 'YAEL', 71: 'SAVANNAH', 72: 'VANESSA', 73: 'SIMONE', 74: 'SLOANE', 75: 'VERA', 76: 'YEHUDIS', 77: 'SYLVIA', 78: 'SIMA', 79: 'SHAINA', 80: 'TZIPORA', 81: 'YITTA', 82: 'TZIVIA', 83: 'YARA'}
+female_baby_names_2012 = {}
+print(records[0])
+for row in records:
+  if row[0] == "2012" and row[1] == "FEMALE":
+    female_baby_names_2012[row[5]] = row[3]
+quit()
+print(female_baby_names_2012)
 
 # Creating and looping through dictionaries
 # Create an empty dictionary: names_by_rank
@@ -31,7 +37,23 @@ for rank in sorted(names_by_rank, reverse = True)[:10]:
 quit()
 
 # Safely finding by key
-names = {1: 'EMMA', 2: 'LEAH', 3: 'SARAH', 4: 'SOPHIA', 5: 'ESTHER', 6: 'RACHEL', 7: 'CHAYA', 8: 'AVA', 9: 'CHANA', 10: 'MIRIAM', 11: 'ELLA', 12: 'EMILY', 13: 'MIA', 14: 'SARA', 15: 'CHARLOTTE', 16: 'ISABELLA', 17: 'MAYA', 18: 'ELIZABETH', 19: 'ABIGAIL', 20: 'ALEXANDRA', 21: 'VICTORIA', 22: 'LILY', 23: 'SOFIA', 24: 'RIVKA', 25: 'ZOE', 26: 'JULIA', 27: 'SOPHIE', 28: 'GABRIELLA', 29: 'HANNAH', 30: 'GRACE', 31: 'AVERY', 32: 'STELLA', 33: 'SHAINDY', 34: 'FAIGY', 35: 'GITTY', 36: 'MADISON', 37: 'MALKY', 38: 'EVA', 39: 'MALKA', 40: 'ALEXA', 41: 'MADELINE', 42: 'PENELOPE', 43: 'TOBY', 44: 'RIVKY', 45: 'NICOLE', 46: 'VIOLET', 47: 'NATALIE', 48: 'REBECCA', 49: 'MARIA', 50: 'YITTY', 51: 'NINA', 52: 'KATHERINE', 53: 'RILEY', 54: 'SIENNA', 55: 'SYDNEY', 56: 'VIVIENNE', 57: 'VALENTINA', 58: 'TALIA', 59: 'JOSEPHINE', 60: 'FRANCESCA', 61: 'ZISSY', 62: 'SURY', 63: 'NAOMI', 64: 'YIDES', 65: 'SKYLAR', 66: 'VERONICA', 67: 'TAYLOR', 68: 'ZOEY', 69: 'LILIANA', 70: 'YAEL', 71: 'SAVANNAH', 72: 'VANESSA', 73: 'SIMONE', 74: 'SLOANE', 75: 'VERA', 76: 'YEHUDIS', 77: 'SYLVIA', 78: 'SIMA', 79: 'SHAINA', 80: 'TZIPORA', 81: 'YITTA', 82: 'TZIVIA', 83: 'YARA'}
+names = {1: 'EMMA', 2: 'LEAH', 3: 'SARAH', 4: 'SOPHIA', 5: 'ESTHER', 
+6: 'RACHEL', 7: 'CHAYA', 8: 'AVA', 9: 'CHANA', 10: 'MIRIAM', 11: 'ELLA', 
+12: 'EMILY', 13: 'MIA', 14: 'SARA', 15: 'CHARLOTTE', 16: 'ISABELLA',
+17: 'MAYA', 18: 'ELIZABETH', 19: 'ABIGAIL', 20: 'ALEXANDRA', 21: 'VICTORIA',
+22: 'LILY', 23: 'SOFIA', 24: 'RIVKA', 25: 'ZOE', 26: 'JULIA', 27: 'SOPHIE',
+28: 'GABRIELLA', 29: 'HANNAH', 30: 'GRACE', 31: 'AVERY', 32: 'STELLA',
+33: 'SHAINDY', 34: 'FAIGY', 35: 'GITTY', 36: 'MADISON', 37: 'MALKY', 
+38: 'EVA', 39: 'MALKA', 40: 'ALEXA', 41: 'MADELINE', 42: 'PENELOPE',
+43: 'TOBY', 44: 'RIVKY', 45: 'NICOLE', 46: 'VIOLET', 47: 'NATALIE', 
+48: 'REBECCA', 49: 'MARIA', 50: 'YITTY', 51: 'NINA', 52: 'KATHERINE',
+53: 'RILEY', 54: 'SIENNA', 55: 'SYDNEY', 56: 'VIVIENNE', 57: 'VALENTINA',
+58: 'TALIA', 59: 'JOSEPHINE', 60: 'FRANCESCA', 61: 'ZISSY', 62: 'SURY', 
+63: 'NAOMI', 64: 'YIDES', 65: 'SKYLAR', 66: 'VERONICA', 67: 'TAYLOR', 
+68: 'ZOEY', 69: 'LILIANA', 70: 'YAEL', 71: 'SAVANNAH', 72: 'VANESSA', 
+73: 'SIMONE', 74: 'SLOANE', 75: 'VERA', 76: 'YEHUDIS', 77: 'SYLVIA',
+78: 'SIMA', 79: 'SHAINA', 80: 'TZIPORA', 81: 'YITTA', 82: 'TZIVIA', 83: 'YARA'}
+
 # Safely print rank 7 from the names dictionary
 print(names.get(7))
 
