@@ -104,19 +104,72 @@ quit()
 
 # Checking dictionaries for data
 # Check to see if 2011 is in baby_names
-____ ____ ____ ____:
+if 2011 in baby_names:
     # Print 'Found 2011'
     print('Found 2011')
-    
-# Check to see if rank 1 is in 2012
+quit()
 
+# Check to see if rank 1 is in 2012
+if 1 in baby_names[2012]:
     # Print 'Found Rank 1 in 2012' if found
     print('Found Rank 1 in 2012')
 else:
     # Print 'Rank 1 missing from 2012' if not found
     print('Rank 1 missing from 2012')
-    
-# Check to see if Rank 5 is in 2013
+quit()
 
+# Check to see if Rank 5 is in 2013
+if 5 in baby_names[2013]:
    # Print 'Found Rank 5'
    print('Found Rank 5')
+quit()
+
+#######################################################
+# Working with CSV files ------------------------------------------------
+# csv module
+# open() - provides a variable that represents a file, takes a path and 
+# a mode ('r' for read or 'w' for write)
+# .reader() - reads a file object and returns the lines from the files as tuple
+# .close() method closes file objects
+# Reading from a file using CSV reader
+baby_names = {}
+# Import the python CSV module
+import csv
+
+# Create a python file object in read mode for the baby_names.csv file: csvfile
+csvfile = open("Datasets/babynames.csv", mode = 'r')
+
+# Loop over a csv reader on the file object
+for row in csv.reader(csvfile):
+    # Print each row 
+    print(row)
+    # Add the rank and name to the dictionary
+    baby_names[row[5]] = row[3]
+quit()
+# Print the dictionary keys
+print(baby_names.keys())
+
+csvfile.close()
+
+# Creting a dictionary from a file
+baby_names = {}
+# Import the python CSV module
+import csv
+
+# Create a python file object in read mode for the `baby_names.csv` file: csvfile
+csvfile = open("Datasets/babynames.csv", mode = 'r')
+
+# Loop over a DictReader on the file
+for row in csv.DictReader(csvfile):
+    # Print each row 
+    print(row)
+    # Add the rank and name to the dictionary: baby_names
+    baby_names[row['RANK']] = row['NAME']
+quit()
+# Print the dictionary keys
+print(baby_names.keys())
+
+csvfile.close()
+
+#######################################################
+
