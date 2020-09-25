@@ -4,3 +4,5 @@
 # VNTBJR
 # ------------------------------------------------
 # 
+# Load packages
+reticulate::repl_python()
