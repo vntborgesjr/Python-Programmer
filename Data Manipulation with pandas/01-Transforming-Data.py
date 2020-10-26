@@ -56,7 +56,7 @@ print(homelessness.index)
 #######################################################
 # Sorting and subsetting ------------------------------------------------
 #######################################################
-# .sort_values() - sort rows accordingo to one or more specific columns
+# .sort_values() - sort rows according to one or more specific columns
 # DataFrame['column name'] - subset just one column
 # DataFrame[['column name1', 'column name2']] - subset multiple columns
 # .isin() - filter on mltiple values of categorical variable
@@ -115,14 +115,16 @@ print(mountain_reg)
 
 # Filter for rows where family_members is less than 1000 
 # and region is Pacific
-fam_lt_1k_pac = homelessness[(homelessness['family_members'] < 1000) & (homelessness['region'] == 'Pacific')]
+fam_lt_1k_pac = homelessness[(homelessness['family_members'] < 1000) & 
+(homelessness['region'] == 'Pacific')]
 
 # See the result
 print(fam_lt_1k_pac)
 
 # Subseting rows by categorical variables
 # Subset for rows in South Atlantic or Mid-Atlantic regions
-south_mid_atlantic = homelessness[homelessness['region'].isin(['South Atlantic', 'Mid-Atlantic'])]
+south_mid_atlantic = homelessness[homelessness['region'].isin(['South Atlantic',
+'Mid-Atlantic'])]
 
 # See the result
 print(south_mid_atlantic)
